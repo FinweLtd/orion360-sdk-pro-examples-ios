@@ -1,0 +1,11 @@
+source 'https://github.com/FinweLtd/orion360-sdk-pro-ios-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "8.0"
+workspace 'Hello Orion360'
+
+target "Hello Orion360" do
+	# Third party libs
+	pod 'orion360-sdk-pro-ios'
+end
+
