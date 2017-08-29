@@ -15,10 +15,6 @@
 @property (nonatomic) OrionViewport* viewport;
 @end
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
 - (void)viewDidLoad {
