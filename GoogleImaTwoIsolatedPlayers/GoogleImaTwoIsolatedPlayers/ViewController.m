@@ -9,41 +9,28 @@
 #import "ViewController.h"
 #import <orion360-sdk-pro-ios/OrionView.h>
 
-// https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/tags
-
 // The content URL to play.
 NSString *const contentURL = @"https://player.vimeo.com/external/186333842.m3u8?s=93e42bd5d8ccff2817bb1e8fff7985d3abd83df1";
 
+#pragma mark IMA sample tags
+// More sample tags here: https://developers.google.com/interactive-media-ads/docs/sdks/html5/client-side/tags
+
 // Standard pre-roll
-static NSString *const kPrerollTag = @"https://pubads.g.doubleclick.net/gampad/"
-    @"ads?iu=/21775744923/external/single_ad_samples&sz=640x480&"
-    @"cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&"
-    @"output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
+static NSString *const kPrerollTag = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
 
 // Skippable
-static NSString *const kSkippableTag = @"https://pubads.g.doubleclick.net/"
-    @"gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&"
-    @"ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&"
-    @"unviewed_position_start=1&env=vp&impl=s&correlator=";
+static NSString *const kSkippableTag = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
 
 // Post-roll
-static NSString *const kPostrollTag = @"https://pubads.g.doubleclick.net/"
-    @"gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&"
-    @"cust_params=sample_ar%3Dpostonly&ciu_szs=300x250&gdfp_req=1&ad_rule=1&"
-    @"output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";
+static NSString *const kPostrollTag = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpostonly&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";
 
 // VMAP Pre-, Mid-, and Post-rolls, Single Ads
 static NSString *const kPreMidPostSingleTag = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpost&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=";
 
-// VMAP - Pre-roll Single Ad, Mid-roll Standard Pods with 5 Ads Every 10 Seconds for 1:40, Post-roll Single Ad
-static NSString *const kWMAP = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostlongpod&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=";
-
-// VMAP pods (has midrolls)
-static NSString *const kVMAPPodsTag = @"https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostpod&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=";
-
-// First ad break (90s duration, 3 ads maximum)
-static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&env=vp&gdfp_req=1&impl=s&output=vast&unviewed_position_start=1&url=https://www.publisher.com&ciu_szs=728x90,300x250&correlator=7105&pmnd=0&pmxd=90000&pmad=3&pod=1&vpos=midroll&mridx=1&scor=17&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostoptimizedpod";
-
+/*
+https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side#5_implement_content_playhead_tracker_and_end-of-stream_observer
+In order to play mid-roll ads, the IMA SDK needs to track the current position of your video content.
+ */
 @implementation OrionContentPlayhead
 @synthesize currentTime;
 -(void)updateCurrentTime:(CGFloat) newTime {
@@ -51,7 +38,9 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 }
 @end
 
+
 @interface ViewController ()<OrionViewDelegate, OrionVideoContentDelegate, IMAAdsLoaderDelegate, IMAAdsManagerDelegate>
+
 // ORION
 @property (nonatomic) OrionView* orionView;
 @property (nonatomic) OrionVideoContent* videoContent;
@@ -62,7 +51,6 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 @property(nonatomic) IMAAdsLoader *adsLoader;
 
 /// Playhead used by the SDK to track content video progress and insert mid-rolls.
-//@property(nonatomic) IMAAVPlayerContentPlayhead *contentPlayhead;
 @property(nonatomic) OrionContentPlayhead *contentPlayhead;
 
 /// Main point of interaction with the SDK. Created by the SDK as the result of an ad request.
@@ -101,6 +89,8 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 //-(void) appEnteredBackground {
 //}
 
+#pragma mark Orion Setup
+
 - (void) setupOrion {
     if (!_orionView)
     {
@@ -137,8 +127,12 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 - (void)setupAdsLoader {
     self.adsLoader = [[IMAAdsLoader alloc] init];
     
+    /*
+     Manual Ad Break Playback (Part 1) - If you want to control ads manually
+     https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/manual_ad_playback
+     */
 //    IMASettings *settings = [[IMASettings alloc] init];
-//    // Tell the SDK that you want to control ad break playback. https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/manual_ad_playback
+//    // Tell the SDK that you want to control ad break playback.
 //    settings.autoPlayAdBreaks = NO;
 //    self.adsLoader = [[IMAAdsLoader alloc] initWithSettings:settings];
     
@@ -152,46 +146,13 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
                                         viewController:self
                                         companionSlots:nil];
 //     Create an ad request with our ad tag, display container, and optional user context.
-    IMAAdsRequest *request = [[IMAAdsRequest alloc] initWithAdTagUrl:kVMAPPodsTag
+    IMAAdsRequest *request = [[IMAAdsRequest alloc] initWithAdTagUrl:kPreMidPostSingleTag
                                                   adDisplayContainer:adDisplayContainer
                                                      contentPlayhead:self.contentPlayhead
                                                          userContext:nil];
     
-//    IMAAdsRequest *request = [[IMAAdsRequest alloc]
-//             initWithAdTagUrl:kVMAPPodsTag
-//           adDisplayContainer:[self createAdDisplayContainer]
-//         avPlayerVideoDisplay:[[IMAAVPlayerVideoDisplay alloc] initWithAVPlayer:self.contentPlayer]
-//        pictureInPictureProxy:nil//self.pictureInPictureProxy
-//                  userContext:nil];
-    
     [self.adsLoader requestAdsWithRequest:request];
 }
-
-//- (void)contentDidFinishPlaying:(NSNotification *)notification {
-//  // Make sure we don't call contentComplete as a result of an ad completing.
-//  if (notification.object == self.contentPlayer.currentItem) {
-//    [self.adsLoader contentComplete];
-//  }
-//}
-
-#pragma mark IMA SDK methods
-
-//// Initialize ad display container.
-//- (IMAAdDisplayContainer *)createAdDisplayContainer {
-//  // Create our AdDisplayContainer. Initialize it with our videoView as the container. This
-//  // will result in ads being displayed over our content video.
-//  if (self.companionView) {
-//    // MOE:strip_line [START ad_display_container_init]
-//    return [[IMAAdDisplayContainer alloc] initWithAdContainer:self.videoView
-//                                               viewController:self
-//                                               companionSlots:@[ self.companionSlot ]];
-//    // [END ad_display_container_init] MOE:strip_line
-//  } else {
-//    return [[IMAAdDisplayContainer alloc] initWithAdContainer:self.videoView
-//                                               viewController:self
-//                                               companionSlots:nil];
-//  }
-//}
 
 #pragma mark AdsLoader Delegates
 
@@ -231,9 +192,12 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 //        case kIMAAdEvent_TAPPED:
 //            [self showFullscreenControls:nil];
 //            break;
+            /*
+             Manual Ad Break Playback (Part 2) - If you want to control ads manually
+             https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/manual_ad_playback
+             */
 //            // Listen for the AD_BREAK_READY event
 //        case kIMAAdEvent_AD_BREAK_READY:
-//            // https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/manual_ad_playback
 //            // Tell the SDK to play ads when you're ready. To skip this ad break,
 //            // simply return from this handler without calling [adsManager start].
 //            [adsManager start];
