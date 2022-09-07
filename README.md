@@ -12,3 +12,9 @@ cd GoogleImaTwoIsolatedPlayers
 pod install --repo-update
 ```
 - Launch GoogleImaTwoIsolatedPlayers.xcworkspace
+
+### Official IMA SDK documentation and sample source code
+https://developers.google.com/interactive-media-ads
+https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side
+https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/faq
+https://github.com/googleads/googleads-ima-ios
