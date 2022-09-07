@@ -1,0 +1,12 @@
+source 'https://github.com/FinweLtd/orion360-sdk-pro-ios-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12'
+workspace 'GoogleImaTwoIsolatedPlayers'
+
+target "GoogleImaTwoIsolatedPlayers" do
+	# Third party libs
+	pod 'orion360-sdk-pro-ios'
+  pod 'GoogleAds-IMA-iOS-SDK', '~> 3.16.3'
+end
+

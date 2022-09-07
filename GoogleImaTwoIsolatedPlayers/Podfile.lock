@@ -1,0 +1,21 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.16.3)
+  - orion360-sdk-pro-ios (2.2.47)
+
+DEPENDENCIES:
+  - GoogleAds-IMA-iOS-SDK (~> 3.16.3)
+  - orion360-sdk-pro-ios
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleAds-IMA-iOS-SDK
+  https://github.com/FinweLtd/orion360-sdk-pro-ios-specs.git:
+    - orion360-sdk-pro-ios
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: 1aba71fa5b58dc463cc5b752f06e970ec7c739c1
+  orion360-sdk-pro-ios: a4f9fe75c13846046229f2dd06b142606482e7fc
+
+PODFILE CHECKSUM: 4717aa74f79c23799e515a3ec5544ae4223837fd
+
+COCOAPODS: 1.10.1
