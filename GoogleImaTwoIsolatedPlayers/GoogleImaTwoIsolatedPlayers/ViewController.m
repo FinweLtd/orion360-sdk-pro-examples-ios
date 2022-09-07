@@ -247,7 +247,7 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
   // Fall back to playing content.
   NSLog(@"AdsManager error: %@", error.message);
 //  [self showContentPlayer];
-    [_videoContent play:0.0f];
+    [_videoContent play: _videoContent.currentTime];
 }
 
 - (void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager {
@@ -259,7 +259,7 @@ static NSString *const kTestTag = @"https://securepubads.g.doubleclick.net/gampa
 - (void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager {
   // Resume the content since the SDK is done playing ads (at least for now).
 //  [self showContentPlayer];
-    [_videoContent play:0.0f];
+    [_videoContent play: _videoContent.currentTime];
 }
 
 #pragma mark Orion Delegates
