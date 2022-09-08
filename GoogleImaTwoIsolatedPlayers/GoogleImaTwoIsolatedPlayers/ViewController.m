@@ -224,21 +224,21 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
 }
 
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdError:(IMAAdError *)error {
-  // Fall back to playing content.
-  NSLog(@"AdsManager error: %@", error.message);
-  [self showContentPlayer];
+    // Fall back to playing content.
+    NSLog(@"AdsManager error: %@", error.message);
+    [self showContentPlayer];
     [_videoContent play: _videoContent.currentTime];
 }
 
 - (void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager {
-  // Pause the content for the SDK to play ads.
+    // Pause the content for the SDK to play ads.
     [_videoContent pause];
-  [self hideContentPlayer];
+    [self hideContentPlayer];
 }
 
 - (void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager {
-  // Resume the content since the SDK is done playing ads (at least for now).
-  [self showContentPlayer];
+    // Resume the content since the SDK is done playing ads (at least for now).
+    [self showContentPlayer];
     [_videoContent play: _videoContent.currentTime];
 }
 
