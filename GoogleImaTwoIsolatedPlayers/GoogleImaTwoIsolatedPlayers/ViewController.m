@@ -45,6 +45,7 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
 @property (nonatomic) OrionView* orionView;
 @property (nonatomic) OrionVideoContent* videoContent;
 @property (nonatomic) OrionViewport* viewport;
+@property(nonatomic) OrionViewportController *contentPlayerViewController;
 
 // IMA
 /// Entry point for the SDK. Used to make ad requests.
@@ -103,7 +104,6 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
         NSURL *licenseUrl = [NSURL fileURLWithPath:path];
         [self.orionView setLicenseFileUrl:licenseUrl];
         
-        [self.view addSubview:_orionView];
         
         //        _orionView.overrideSilentSwitch = YES;
         
@@ -119,7 +119,19 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
         [_orionView addOrionViewport:_viewport orionContent:_videoContent];
         
         self.contentPlayhead = [[OrionContentPlayhead alloc] init];
+        
+        [self showContentPlayer];
     }
+}
+
+// Add the content video player as a child view controller.
+- (void)showContentPlayer {
+    [self.view addSubview:_orionView];
+}
+
+// Remove and detach the content video player.
+- (void)hideContentPlayer {
+    [_orionView removeFromSuperview];
 }
 
 #pragma mark IMA SDK Setup
@@ -210,19 +222,19 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdError:(IMAAdError *)error {
   // Fall back to playing content.
   NSLog(@"AdsManager error: %@", error.message);
-//  [self showContentPlayer];
+  [self showContentPlayer];
     [_videoContent play: _videoContent.currentTime];
 }
 
 - (void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager {
   // Pause the content for the SDK to play ads.
     [_videoContent pause];
-//  [self hideContentPlayer];
+  [self hideContentPlayer];
 }
 
 - (void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager {
   // Resume the content since the SDK is done playing ads (at least for now).
-//  [self showContentPlayer];
+  [self showContentPlayer];
     [_videoContent play: _videoContent.currentTime];
 }
 
