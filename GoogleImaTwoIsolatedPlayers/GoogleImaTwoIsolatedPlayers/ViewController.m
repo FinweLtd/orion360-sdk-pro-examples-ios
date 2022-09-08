@@ -137,16 +137,20 @@ In order to play mid-roll ads, the IMA SDK needs to track the current position o
 #pragma mark IMA SDK Setup
 
 - (void)setupAdsLoader {
-    self.adsLoader = [[IMAAdsLoader alloc] init];
+    IMASettings *settings = [[IMASettings alloc] init];
+    
+    // Tell IMA SDK to use the language of the device
+    NSString * deviceLanguage = [[NSLocale preferredLanguages] firstObject];
+    settings.language = deviceLanguage;
     
     /*
      Manual Ad Break Playback (Part 1) - If you want to control ads manually
      https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/manual_ad_playback
      */
-//    IMASettings *settings = [[IMASettings alloc] init];
 //    // Tell the SDK that you want to control ad break playback.
 //    settings.autoPlayAdBreaks = NO;
-//    self.adsLoader = [[IMAAdsLoader alloc] initWithSettings:settings];
+    
+    self.adsLoader = [[IMAAdsLoader alloc] initWithSettings:settings];
     
     self.adsLoader.delegate = self;
 }
