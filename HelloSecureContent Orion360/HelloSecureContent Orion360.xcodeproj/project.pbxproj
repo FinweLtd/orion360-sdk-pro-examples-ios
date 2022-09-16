@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B5E067E1EFA88D400B31BFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E067D1EFA88D400B31BFB /* main.m */; };
+		2B5E06811EFA88D400B31BFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E06801EFA88D400B31BFB /* AppDelegate.m */; };
+		2B5E06841EFA88D400B31BFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E06831EFA88D400B31BFB /* ViewController.m */; };
+		2B5E06871EFA88D400B31BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E06851EFA88D400B31BFB /* Main.storyboard */; };
+		2B5E06891EFA88D400B31BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E06881EFA88D400B31BFB /* Assets.xcassets */; };
+		2B5E068C1EFA88D400B31BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E068A1EFA88D400B31BFB /* LaunchScreen.storyboard */; };
+		2B5E06941EFA892100B31BFB /* license.key.lic in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E06931EFA892100B31BFB /* license.key.lic */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B5E06791EFA88D400B31BFB /* HelloSecureContent Orion360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloSecureContent Orion360.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5E067D1EFA88D400B31BFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B5E067F1EFA88D400B31BFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B5E06801EFA88D400B31BFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B5E06821EFA88D400B31BFB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2B5E06831EFA88D400B31BFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B5E06861EFA88D400B31BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B5E06881EFA88D400B31BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B5E068B1EFA88D400B31BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B5E068D1EFA88D400B31BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5E06931EFA892100B31BFB /* license.key.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.key.lic; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B5E06761EFA88D400B31BFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B5E06701EFA88D400B31BFB = {
+			isa = PBXGroup;
+			children = (
+				2B5E067B1EFA88D400B31BFB /* HelloSecureContent Orion360 */,
+				2B5E067A1EFA88D400B31BFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B5E067A1EFA88D400B31BFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E06791EFA88D400B31BFB /* HelloSecureContent Orion360.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B5E067B1EFA88D400B31BFB /* HelloSecureContent Orion360 */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E06931EFA892100B31BFB /* license.key.lic */,
+				2B5E067F1EFA88D400B31BFB /* AppDelegate.h */,
+				2B5E06801EFA88D400B31BFB /* AppDelegate.m */,
+				2B5E06821EFA88D400B31BFB /* ViewController.h */,
+				2B5E06831EFA88D400B31BFB /* ViewController.m */,
+				2B5E06851EFA88D400B31BFB /* Main.storyboard */,
+				2B5E06881EFA88D400B31BFB /* Assets.xcassets */,
+				2B5E068A1EFA88D400B31BFB /* LaunchScreen.storyboard */,
+				2B5E068D1EFA88D400B31BFB /* Info.plist */,
+				2B5E067C1EFA88D400B31BFB /* Supporting Files */,
+			);
+			path = "HelloSecureContent Orion360";
+			sourceTree = "<group>";
+		};
+		2B5E067C1EFA88D400B31BFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E067D1EFA88D400B31BFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B5E06781EFA88D400B31BFB /* HelloSecureContent Orion360 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5E06901EFA88D400B31BFB /* Build configuration list for PBXNativeTarget "HelloSecureContent Orion360" */;
+			buildPhases = (
+				2B5E06751EFA88D400B31BFB /* Sources */,
+				2B5E06761EFA88D400B31BFB /* Frameworks */,
+				2B5E06771EFA88D400B31BFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelloSecureContent Orion360";
+			productName = "Hello Orion360";
+			productReference = 2B5E06791EFA88D400B31BFB /* HelloSecureContent Orion360.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B5E06711EFA88D400B31BFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Finwe Ltd.";
+				TargetAttributes = {
+					2B5E06781EFA88D400B31BFB = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2B5E06741EFA88D400B31BFB /* Build configuration list for PBXProject "HelloSecureContent Orion360" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 2B5E06701EFA88D400B31BFB;
+			productRefGroup = 2B5E067A1EFA88D400B31BFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B5E06781EFA88D400B31BFB /* HelloSecureContent Orion360 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B5E06771EFA88D400B31BFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5E068C1EFA88D400B31BFB /* LaunchScreen.storyboard in Resources */,
+				2B5E06891EFA88D400B31BFB /* Assets.xcassets in Resources */,
+				2B5E06871EFA88D400B31BFB /* Main.storyboard in Resources */,
+				2B5E06941EFA892100B31BFB /* license.key.lic in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B5E06751EFA88D400B31BFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5E06841EFA88D400B31BFB /* ViewController.m in Sources */,
+				2B5E06811EFA88D400B31BFB /* AppDelegate.m in Sources */,
+				2B5E067E1EFA88D400B31BFB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B5E06851EFA88D400B31BFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B5E06861EFA88D400B31BFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B5E068A1EFA88D400B31BFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B5E068B1EFA88D400B31BFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B5E068E1EFA88D400B31BFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B5E068F1EFA88D400B31BFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B5E06911EFA88D400B31BFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloSecureContent Orion360/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fi.finwe.HelloSecureContent-Orion360";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2B5E06921EFA88D400B31BFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloSecureContent Orion360/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fi.finwe.HelloSecureContent-Orion360";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B5E06741EFA88D400B31BFB /* Build configuration list for PBXProject "HelloSecureContent Orion360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5E068E1EFA88D400B31BFB /* Debug */,
+				2B5E068F1EFA88D400B31BFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B5E06901EFA88D400B31BFB /* Build configuration list for PBXNativeTarget "HelloSecureContent Orion360" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5E06911EFA88D400B31BFB /* Debug */,
+				2B5E06921EFA88D400B31BFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B5E06711EFA88D400B31BFB /* Project object */;
+}
