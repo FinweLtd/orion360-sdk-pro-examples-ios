@@ -1,11 +1,11 @@
 source 'https://github.com/FinweLtd/orion360-sdk-pro-ios-specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, "10.0"
+platform :ios, "11.0"
 workspace 'HelloSecureContent Orion360'
 
 target "HelloSecureContent Orion360" do
 	# Third party libs
-	pod 'orion360-sdk-pro-ios', '>= 2.2.48'
+	pod 'orion360-sdk-pro-ios', '>= 2.2.52'
 end
 

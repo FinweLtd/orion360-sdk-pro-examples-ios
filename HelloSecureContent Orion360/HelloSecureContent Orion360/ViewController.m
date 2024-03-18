@@ -78,7 +78,7 @@ typedef NS_ENUM(NSUInteger, PlayContentType) {
         if (_playContentType == PlayContentTypePublic)
         {
             // Public content that is not secured.
-            _videoContent.uriArray = [[NSArray alloc] initWithObjects:[NSURL URLWithString:@"https://player.vimeo.com/external/187645100.m3u8?s=2fb48fc8005cebe2f10255fdc2fa1ed6da59ea53"], nil];
+            _videoContent.uriArray = [[NSArray alloc] initWithObjects:[NSURL URLWithString:@"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"], nil];
         }
         else if (_playContentType == PlayContentTypeSecuredCanned)
         {
